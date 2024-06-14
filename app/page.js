@@ -129,12 +129,11 @@ export default function Home() {
       )}
       {ticTacToe.map((item, rowIndex) => {
         return (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center" key={rowIndex}>
             <div
               className={`flex justify-center items-center w-72 ${
                 rowIndex === 0 ? "" : "border-t-2 border-t-white"
               }`}
-              key={rowIndex}
             >
               {item.map((el, colIndex) => {
                 return (
