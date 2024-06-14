@@ -140,6 +140,11 @@ export default function Home() {
                   <div
                     className={`w-24 h-24 p-2 flex-shrink-0 flex justify-center items-center cursor-pointer font-semibold text-lg ${
                       colIndex === 0 ? "" : "border-l-2 border-l-white"
+                    } ${
+                      previousMoves[currentPlayer]["3"]?.rowIndex == rowIndex &&
+                      previousMoves[currentPlayer]["3"]?.colIndex === colIndex
+                        ? "text-gray-400"
+                        : ""
                     }`}
                     key={`${rowIndex}${colIndex}`}
                     onClick={() => handleCellClick(rowIndex, colIndex)}
